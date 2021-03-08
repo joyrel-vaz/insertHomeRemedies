@@ -15,10 +15,10 @@ csv()
 .then((jsonObj)=>{
     let i = 43;
     jsonObj.forEach((remedy) => {
-        remedy.id = i++;
-        db.collection('dadiKeNuske').doc(remedy.id.toString()).set(remedy).then(()=> console.log('Success!')).catch(
+        db.collection('dadiKeNuske').doc(i.toString()).set(remedy).then(()=> console.log('Success!')).catch(
             (err)=> console.log(err)
         );
+i++;
     });
 
 })
